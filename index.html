@@ -439,6 +439,15 @@
       text-align: center;
     }
 
+    .gallery-img {
+      width: 100%;
+      height: 260px;
+      border-radius: 14px;
+      margin-bottom: 8px;
+      display: block;
+      object-fit: cover;
+    }
+
     footer a {
       color: var(--accent);
       text-decoration: none;
@@ -459,7 +468,6 @@
           <div class="brand-sub">Buddyzm Tybetański – tradycje Khordong i Dziangter</div>
         </div>
       </div>
-      <a href="#zapisy" class="btn btn-primary header-cta">Zapisz się na kurs</a>
     </header>
 
     <section class="hero" aria-labelledby="hero-title">
@@ -487,7 +495,7 @@
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5XVYN7HvqVNay1Amu1lHqr05MALSyCByVRp4ND6UVr8tx1w/viewform?usp=publish-editor"
              class="btn btn-primary"
              target="_blank" rel="noopener noreferrer">Zapisz się na kurs</a>
-          <a href="#program" class="btn btn-outline">Zobacz program kursu</a>
+          <a href="#program" class="btn btn-outline">Program kursu już wkrótce</a>
         </div>
         <div class="hero-note">
           Liczba miejsc jest ograniczona – zarezerwuj swoje miejsce już teraz.
@@ -501,10 +509,9 @@
       <aside class="hero-image-card" aria-label="Przykładowy kadr z kursu">
         <div class="hero-image-frame">
           <div class="hero-glow" aria-hidden="true"></div>
-          <!-- Zdjęcie z katalogu _materialy/Images/ (robocza nazwa pliku) -->
-          <!-- Podmień nazwę pliku na właściwe zdjęcie z ośrodka / lampek maślanych -->
-          <img src="_materialy/Images/hero_lamps.jpg"
-               alt="Lampki maślane i ośrodek Dropan Ling w Górach Stołowych"
+          <!-- Zdjęcie z katalogu _materiały/Images/ -->
+          <img src="_materiały/Images/lamps_closeup.jpg"
+               alt="Lampki maślane podczas praktyki w Dropan Ling"
                style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px; border: 1px solid rgba(255,255,255,0.8);" />
         </div>
         <div class="hero-stat">
@@ -597,11 +604,43 @@
             </p>
           </div>
           <div class="card-soft">
-            <!-- Placeholder na zdjęcie z ośrodka -->
-            <!-- Przykład: <img src="_materialy/Images/center_view.jpg" alt="Widok na ośrodek Dropan Ling" /> -->
-            <strong>Zdjęcie z Dropan Ling</strong><br />
-            W finalnej wersji tej sekcji możesz podmienić ten blok na zdjęcie z katalogu
-            <code>_materialy/Images/</code>, np. kadry natury lub wnętrza gompy.
+            <!-- Zdjęcie ośrodka z katalogu _materiały/Images/ -->
+            <img src="_materiały/Images/ośrodek pośród gór widok.jpg"
+                 alt="Ośrodek Dropan Ling pośród gór i lasu"
+                 style="width: 100%; border-radius: 14px; margin-bottom: 8px; display: block;" />
+            <strong>Dropan Ling w Górach Stołowych</strong><br />
+            Spokojne miejsce pośród lasów i górskich ścieżek – przestrzeń sprzyjająca praktyce i odpoczynkowi.
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="galeria">
+        <div class="section-eyebrow">Galeria</div>
+        <h2 id="galeria" class="section-title">Chwile z kursu Podarowania Lampek Maślanych</h2>
+        <p class="section-intro">
+          Kilka ujęć, które oddają atmosferę spotkań w Dropan Ling – lampki maślane, praktykujący i sam ośrodek
+          położony w Górach Stołowych.
+        </p>
+        <div class="two-column">
+          <div>
+            <!-- Uśmiechnięci ludzie / praktykujący -->
+            <img src="_materiały/Images/ludzie przed wejsciem.jpg"
+                 alt="Uczestnicy przed wejściem do ośrodka Dropan Ling"
+                 class="gallery-img" />
+            <p class="muted">
+              Wspólna praktyka i czas spędzony razem – miejsce, w którym można odetchnąć i spotkać ludzi
+              szukających podobnej jakości w życiu.
+            </p>
+          </div>
+          <div>
+            <!-- Lampki maślane z bliska -->
+            <img src="_materiały/Images/lampki.jpg"
+                 alt="Lampki maślane przygotowane do praktyki ofiarowania"
+                 class="gallery-img" />
+            <p class="muted">
+              Lampki maślane – małe punkty światła, które łączą się we wspólną intencję spokoju
+              dla wielu istot.
+            </p>
           </div>
         </div>
       </section>
@@ -637,8 +676,10 @@
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5XVYN7HvqVNay1Amu1lHqr05MALSyCByVRp4ND6UVr8tx1w/viewform?usp=publish-editor"
              class="btn btn-primary"
              target="_blank" rel="noopener noreferrer">Zapisz się na kurs</a>
-          <a href="#program" class="btn btn-outline">Zobacz program kursu</a>
-          <a href="#" class="btn btn-outline">Poznaj tradycję Khordong</a>
+          <a href="#program" class="btn btn-outline">Program kursu już wkrótce</a>
+          <a href="https://www.khordong.pl"
+             class="btn btn-outline"
+             target="_blank" rel="noopener noreferrer">Poznaj tradycję Khordong</a>
         </div>
         <div class="cta-note">
           Zarezerwuj miejsce i dołącz do wspólnej praktyki 100 000 lampek.
@@ -653,8 +694,13 @@
           wątpliwości. Lepiej zadać pytanie dziś, niż dokładać sobie zmęczenia jutro.
         </p>
         <p class="muted">
-          Tutaj możesz dodać prosty formularz kontaktowy lub adres e-mail / link do strony kontaktowej.
+          Najświeższe dane kontaktowe – adres, telefon i e-mail – znajdziesz na stronie kontaktowej Khordong.
         </p>
+        <div class="cta-buttons" style="justify-content: flex-start; margin-top: 6px;">
+          <a href="https://www.khordong.pl/kontakt"
+             class="btn btn-outline"
+             target="_blank" rel="noopener noreferrer">Przejdź do strony kontaktowej</a>
+        </div>
       </section>
     </main>
 
