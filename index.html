@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kurs Podarowania 100 000 Lampek Maślanych – Khordong 2026</title>
+  <meta name="description" content="Kurs Podarowania Lampek Maślanych w tradycji Khordong w ośrodku Dropan Ling. Dołącz do intencji 100 000 lampek i zanurz się w spokój umysłu." />
+  <style>
+    :root {
+      --bg-light: #fdfbf8;
+      --bg-section: #ffffff;
+      --border-soft: #e5ded4;
+      --text-main: #2b2420;
+      --text-muted: #6b6058;
+      --accent: #7b0022;
+      --accent-soft: #b33a54;
+      --accent-light: #f4e1e6;
+      --shadow-soft: 0 18px 45px rgba(43, 36, 32, 0.12);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background: radial-gradient(circle at top, #fff7ec 0, #fdfbf8 40%, #f6f2ea 100%);
+      line-height: 1.6;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 8px 4px 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 40% 60% 45% 55%;
+      background: radial-gradient(circle at 30% 20%, #ffe6b8 0, #ffbb4a 30%, #c5601c 70%);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9), 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .header-cta {
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .header-cta {
+        display: inline-flex;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background-color 0.14s ease, color 0.14s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(123, 0, 34, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 38px rgba(123, 0, 34, 0.42);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--accent);
+      border: 1px solid rgba(123, 0, 34, 0.25);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent-light);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr);
+      gap: 28px;
+      padding: 22px 18px 26px;
+      border-radius: 28px;
+      background: radial-gradient(circle at top left, #ffe6cf 0, #fdf8f0 40%, #f6f0e5 100%);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        align-items: center;
+        padding: 30px 30px 32px;
+      }
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(181, 113, 31, 0.2);
+      margin-bottom: 14px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-tag-dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 25%, #fff7da 0, #ffb53b 30%, #c46518 70%);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.72rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 3.2vw + 1.2rem, 2.7rem);
+      line-height: 1.1;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+
+    .hero-highlight {
+      display: inline-block;
+      position: relative;
+    }
+
+    .hero-highlight::after {
+      content: "";
+      position: absolute;
+      inset: 70% -4px -2px;
+      background: rgba(244, 225, 230, 0.9);
+      border-radius: 999px;
+      z-index: -1;
+    }
+
+    .hero-lead {
+      margin: 0 0 10px;
+      color: var(--text-main);
+      font-size: 1rem;
+    }
+
+    .hero-sub {
+      margin: 0 0 20px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-pill {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(229, 222, 212, 0.9);
+    }
+
+    .hero-image-card {
+      display: none;
+    }
+
+    @media (min-width: 840px) {
+      .hero-image-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: stretch;
+      }
+    }
+
+    .hero-image-frame {
+      border-radius: 26px;
+      background: radial-gradient(circle at top, #fff7e4 0, #f3dac0 40%, #d6a070 100%);
+      position: relative;
+      padding: 18px 16px 20px;
+      overflow: hidden;
+      min-height: 240px;
+    }
+
+    .hero-image-placeholder {
+      position: absolute;
+      inset: 14px;
+      border-radius: 22px;
+      border: 1px dashed rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.86rem;
+      text-align: center;
+      padding: 0 16px;
+      backdrop-filter: blur(2px);
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0, transparent 70%);
+      top: -40px;
+      right: -40px;
+      opacity: 0.7;
+    }
+
+    .hero-stat {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(229, 222, 212, 0.9);
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .hero-stat strong {
+      color: var(--accent);
+    }
+
+    main {
+      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    section {
+      background: var(--bg-section);
+      border-radius: var(--radius-lg);
+      padding: 20px 18px 18px;
+      border: 1px solid var(--border-soft);
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 24px;
+      }
+    }
+
+    section + section {
+      box-shadow: 0 10px 36px rgba(43, 36, 32, 0.08);
+    }
+
+    .section-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+
+    .section-intro {
+      margin: 0 0 10px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .section-text {
+      margin: 0 0 8px;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .list {
+      margin: 8px 0 6px 1.2rem;
+      padding-left: 0.5rem;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .list li + li {
+      margin-top: 4px;
+    }
+
+    .two-column {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 840px) {
+      .two-column {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      }
+    }
+
+    .card-soft {
+      padding: 14px 14px 12px;
+      border-radius: 16px;
+      background: #faf6f0;
+      border: 1px solid rgba(229, 222, 212, 0.9);
+      font-size: 0.88rem;
+      color: var(--text-main);
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 6px;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      background: radial-gradient(circle at top, #ffeef0 0, #fdfbf8 55%, #f6f0e5 100%);
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .cta-note {
+      margin-top: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 26px;
+      padding: 16px 4px 4px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-name">Dropan Ling</div>
+          <div class="brand-sub">Buddyzm Tybetański – tradycja Khordong</div>
+        </div>
+      </div>
+      <a href="#zapisy" class="btn btn-primary header-cta">Zapisz się na kurs</a>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="hero-tag">
+          <div class="hero-tag-dot" aria-hidden="true"></div>
+          <span>Kurs Podarowania Lampek Maślanych · Khordong 2026</span>
+        </div>
+        <div class="hero-eyebrow">Intencja 100 000 lampek</div>
+        <h1 id="hero-title" class="hero-title">
+          Kurs Podarowania
+          <span class="hero-highlight">100 000 Lampek Maślanych</span> – zanurz się w spokój umysłu
+        </h1>
+        <p class="hero-lead">
+          Dołącz do wspólnej praktyki w ośrodku Dropan Ling i włącz się w intencję 100 000 lampek
+          dla Ciebie, Twoich bliskich i wszystkich czujących istot.
+        </p>
+        <p class="hero-sub">
+          W świecie, który ciągle czegoś od nas chce, trudno znaleźć chwilę prawdziwego wytchnienia.
+          Kurs Podarowania Lampek Maślanych w tradycji Khordong to zaproszenie, aby na kilka dni zwolnić,
+          uspokoić umysł i zanurzyć się w praktyce, która od wieków służy rozwijaniu współczucia i jasności.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#zapisy" class="btn btn-primary">Zapisz się na kurs</a>
+          <a href="#program" class="btn btn-outline">Zobacz program kursu</a>
+        </div>
+        <div class="hero-note">
+          Liczba miejsc jest ograniczona – zarezerwuj swoje miejsce już teraz.
+        </div>
+        <div class="hero-meta">
+          <div class="hero-pill">Dla osób początkujących i praktykujących</div>
+          <div class="hero-pill">Spokojna praktyka w ciszy i naturze</div>
+        </div>
+      </div>
+
+      <aside class="hero-image-card" aria-label="Przykładowy kadr z kursu">
+        <div class="hero-image-frame">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <!-- Placeholder na zdjęcie z _materialy/Images/ -->
+          <!-- Przykład użycia: <img src="_materialy/Images/hero_lamps.jpg" alt="Lampki maślane w ośrodku Dropan Ling" /> -->
+          <div class="hero-image-placeholder">
+            Tutaj wstawimy zdjęcie z
+            <strong style="margin: 0 4px;">_materialy/Images/</strong>
+            – np. lampek maślanych w Dropan Ling.
+          </div>
+        </div>
+        <div class="hero-stat">
+          <strong>100 000 lampek</strong> – jedna wspólna intencja spokoju,
+          do której możesz dołączyć we własnym tempie.
+        </div>
+      </aside>
+    </section>
+
+    <main>
+      <section aria-labelledby="dlaczego-lampki">
+        <div class="section-eyebrow">Dlaczego ten kurs</div>
+        <h2 id="dlaczego-lampki" class="section-title">100 000 lampek – jedna wspólna intencja spokoju</h2>
+        <p class="section-intro">
+          Każda zapalona lampka maślana jest jak mały akt troski – o siebie, o bliskich, o świat.
+          W tradycji buddyzmu tybetańskiego ofiarowanie światła symbolizuje rozpraszanie ciemności
+          niewiedzy, zamętu i lęku.
+        </p>
+        <p class="section-text">
+          W czasie kursu będziemy stopniowo budować intencję <strong>100 000 lampek</strong>,
+          łącząc indywidualną praktykę każdego uczestnika we wspólną przestrzeń spokoju i otwartości.
+        </p>
+        <div class="two-column" style="margin-top: 12px;">
+          <div>
+            <h3 class="section-text" style="margin-bottom: 6px;">Co daje praktyka lampek maślanych?</h3>
+            <ul class="list">
+              <li>pomaga zatrzymać się i poczuć swoje ciało oraz oddech,</li>
+              <li>uczy zauważania myśli bez wplątywania się w nie,</li>
+              <li>wzmacnia intencję dobra dla siebie i innych,</li>
+              <li>buduje poczucie zakorzenienia i bezpieczeństwa w codziennym chaosie.</li>
+            </ul>
+          </div>
+          <div class="card-soft">
+            <div class="badge">Spokój układu nerwowego</div>
+            W świecie ciągłej dostępności i bodźców praktyka lampek maślanych jest prostym,
+            a jednocześnie głębokim sposobem, by dać swojemu układowi nerwowemu oddech
+            i wrócić do bardziej naturalnego rytmu.
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="dla-kogo">
+        <div class="section-eyebrow">Dla kogo</div>
+        <h2 id="dla-kogo" class="section-title">Dla tych, którzy chcą odetchnąć głębiej</h2>
+        <p class="section-intro">
+          Nie potrzebujesz wcześniejszego doświadczenia medytacyjnego ani znajomości buddyzmu tybetańskiego.
+          Kurs jest dla Ciebie, jeśli czujesz zmęczenie informacyjnym szumem, napięciem,
+          ciągłą „gotowością do działania” i szukasz praktyki, która realnie wspiera układ nerwowy.
+        </p>
+        <p class="section-text">
+          Zapraszamy zarówno osoby zupełnie początkujące, jak i te, które już praktykują i chcą
+          pogłębić kontakt z tradycją Khordong.
+        </p>
+      </section>
+
+      <section aria-labelledby="co-zabierzesz">
+        <div class="section-eyebrow">Co zabierzesz ze sobą</div>
+        <h2 id="co-zabierzesz" class="section-title">Spokój, do którego możesz wracać</h2>
+        <p class="section-intro">
+          W trakcie kursu nauczysz się prostych, ale głębokich praktyk, które możesz potem
+          wplatać w codzienność. Nie chodzi o „idealny stan”, tylko o realne narzędzia –
+          zatrzymanie, oddech, świadomą intencję – które pomogą Ci łagodniej przechodzić
+          przez trudniejsze momenty.
+        </p>
+        <ul class="list">
+          <li>większe poczucie wewnętrznego spokoju i zakorzenienia,</li>
+          <li>lepszy kontakt z ciałem i oddechem,</li>
+          <li>doświadczenie bycia częścią wspólnoty praktykujących,</li>
+          <li>głębsze zrozumienie symboliki lampek maślanych i ich roli w tradycji buddyjskiej,</li>
+          <li>konkretne rytuały i praktyki, do których możesz wracać po zakończeniu kursu.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="miejsce">
+        <div class="section-eyebrow">Miejsce</div>
+        <h2 id="miejsce" class="section-title">Ośrodek Dropan Ling – przestrzeń, która sprzyja wyciszeniu</h2>
+        <div class="two-column">
+          <div>
+            <p class="section-text">
+              Kurs odbywa się w ośrodku buddyzmu tybetańskiego Dropan Ling – miejscu stworzonym
+              do praktyki i odpoczynku. Cisza, natura i prosta, przyjazna przestrzeń sprzyjają
+              temu, by odłożyć na bok codzienne rozproszenia i naprawdę spotkać się ze sobą.
+            </p>
+            <p class="section-text">
+              Tu nie musisz być „jakiś” – możesz po prostu być.
+            </p>
+          </div>
+          <div class="card-soft">
+            <!-- Placeholder na zdjęcie z ośrodka -->
+            <!-- Przykład: <img src="_materialy/Images/center_view.jpg" alt="Widok na ośrodek Dropan Ling" /> -->
+            <strong>Zdjęcie z Dropan Ling</strong><br />
+            W finalnej wersji tej sekcji możesz podmienić ten blok na zdjęcie z katalogu
+            <code>_materialy/Images/</code>, np. kadry natury lub wnętrza gompy.
+          </div>
+        </div>
+      </section>
+
+      <section id="program" aria-labelledby="program-tytul">
+        <div class="section-eyebrow">Program (wersja robocza)</div>
+        <h2 id="program-tytul" class="section-title">Jak może wyglądać dzień na kursie</h2>
+        <p class="section-intro">
+          Dokładny harmonogram możesz doprecyzować później – poniżej propozycja struktury,
+          która oddaje spokojny rytm dnia.
+        </p>
+        <ul class="list">
+          <li>Poranna praktyka i krótkie wprowadzenie do intencji dnia,</li>
+          <li>sesje z ofiarowaniem lampek maślanych i wyjaśnieniem ich symboliki,</li>
+          <li>czas na indywidualną medytację i odpoczynek w ciszy,</li>
+          <li>krótkie spotkania w grupie, możliwość zadawania pytań,</li>
+          <li>wieczorna praktyka podsumowująca dzień.</li>
+        </ul>
+        <p class="muted">
+          Szczegółowy program godzina po godzinie można będzie podlinkować tutaj jako PDF
+          lub osobną podstronę.
+        </p>
+      </section>
+
+      <section id="zapisy" class="cta-section" aria-labelledby="zapisy-tytul">
+        <div class="section-eyebrow">Zapisy</div>
+        <h2 id="zapisy-tytul" class="section-title">Dołącz do intencji 100 000 lampek</h2>
+        <p class="section-intro">
+          Jeśli czujesz, że to jest dobry moment, żeby zadbać o swój spokój ducha i jednocześnie
+          włączyć się w praktykę, która wykracza poza Twoją indywidualną historię – ten kurs jest dla Ciebie.
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary">Zapisz się na kurs</a>
+          <a href="#program" class="btn btn-outline">Zobacz program kursu</a>
+          <a href="#" class="btn btn-outline">Poznaj tradycję Khordong</a>
+        </div>
+        <div class="cta-note">
+          Zarezerwuj miejsce i dołącz do wspólnej praktyki 100 000 lampek.
+        </div>
+      </section>
+
+      <section id="pytania" aria-labelledby="pytania-tytul">
+        <div class="section-eyebrow">Pytania</div>
+        <h2 id="pytania-tytul" class="section-title">Masz pytania?</h2>
+        <p class="section-text">
+          Jeśli chcesz upewnić się, czy ten kurs jest dla Ciebie, napisz do nas – chętnie pomożemy rozwiać
+          wątpliwości. Lepiej zadać pytanie dziś, niż dokładać sobie zmęczenia jutro.
+        </p>
+        <p class="muted">
+          Tutaj możesz dodać prosty formularz kontaktowy lub adres e-mail / link do strony kontaktowej.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        Khordong 2026 · Ośrodek Dropan Ling · Buddyzm Tybetański – tradycja Khordong
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
