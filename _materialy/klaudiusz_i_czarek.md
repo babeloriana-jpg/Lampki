@@ -86,3 +86,43 @@ Jeśli chcesz upewnić się, czy ten kurs jest dla Ciebie, napisz do nas – ch�
 
 <!-- 12:34 2026-02-24 -->
 
+<Czarek timestamp="13:10 2026-02-24">
+Uzupełnienia po feedbacku:
+
+1. Nagłówek / identyfikacja ośrodka
+- Propozycja, żeby w górnej części strony mocniej wyeksponować napis:
+  „Dropan Ling · Buddyzm Tybetański – tradycje Khordong i Dziangter”
+  jako większy, czytelny claim (większa czcionka niż zwykłe body, może z bordo akcentem).
+
+2. Charakter praktyki – dzogczen, nie tylko „prosty mindfulness”
+- W warstwie tekstowej warto delikatnie zaznaczyć, że jest to praktyka w duchu dzogczen, np. przez sformułowanie w hero w stylu:
+  „praktyka w duchu dzogczen, która może być też pierwszym krokiem dla osób zaczynających od prostszych form uważności”.
+- Chodzi o to, żeby:
+  - początkujący poczuli, że to dla nich OK (nie za trudne),
+  - osoby znające tradycję zobaczyły, że nie sprowadzamy tego tylko do relaksu / mindfulnessu.
+
+3. Układ nerwowy – zmiana akcentu
+- Zamiast wprost o „układzie nerwowym” lepiej:
+  - podkreślić, że praktyka w intencji pokoju i dobra dla wielu istot realnie wpływa na to, jak sami się czujemy (więcej spokoju, mniej poczucia osamotnienia i lęku),
+  - dodać miękką wzmiankę, że badania nad praktykami nastawionymi na dobrostan szerszej społeczności pokazują korelację ze spadkiem napięć i konfliktów (nie nazywamy tego wprost „mniej przestępstw”, tylko raczej „mniej napięć, więcej harmonii”).
+- Te akcenty można wpisać szczególnie w sekcję „Dlaczego 100 000 lampek?” / w boxie z wyróżnionym tekstem.
+
+4. Ośrodek – położenie w Górach Stołowych
+- W sekcji o miejscu dopisujemy jasno, że:
+  „Ośrodek Dropan Ling położony jest w Górach Stołowych, niedaleko Kudowy-Zdroju (Darnków / Lewin Kłodzki)”.
+- Dzięki temu osoba z zewnątrz od razu ma mentalną mapę: „góry, spokój, przyroda, okolice Kudowy”.
+
+5. Zdjęcia / hero
+- W części hero dobrze byłoby użyć zdjęcia:
+  - lampek maślanych (bliski kadr, ciepłe światło),
+  - albo ujęcia ośrodka w Górach Stołowych,
+  korzystając z zasobów `_materialy/Images/`.
+- Technicznie: główne zdjęcie hero jako <img> w prawej kolumnie, z możliwością łatwej podmiany pliku (np. robocza nazwa `hero_lamps.jpg` do późniejszego dopasowania).
+
+6. Link do formularza
+- W sekcji „Zapisy” na stronie prosimy o podpięcie przycisku „Zapisz się na kurs” do formularza:
+  https://docs.google.com/forms/d/e/1FAIpQLSd5XVYN7HvqVNay1Amu1lHqr05MALSyCByVRp4ND6UVr8tx1w/viewform?usp=publish-editor
+</Czarek>
+
+<!-- 13:10 2026-02-24 -->
+
